@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
             Text('Here is Question!!'),
             ElevatedButton(
               onPressed: () {
-                answerQuestion;
+                answerQuestion();
               },
               child: Text('Answer 1'),
             ),
