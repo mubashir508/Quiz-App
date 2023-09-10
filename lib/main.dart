@@ -29,13 +29,13 @@ class MyApp extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                answerQuestion;
+                answerQuestion();
               },
               child: Text('Answer 2'),
             ),
             ElevatedButton(
               onPressed: () {
-                answerQuestion;
+                answerQuestion();
               },
               child: Text('Answer 3'),
             )
