@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
 
   void answerQuestion1() {
     qIndex += 1;
-    print('Answer 1 Chosen');
+    print('Red Chosen');
     print(qIndex);
   }
 
@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       'What\'s you favourite colour?',
       'What\'s your favourite animal'
     ];
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -27,17 +28,17 @@ class MyApp extends StatelessWidget {
             Text(questions[0]),
             ElevatedButton(
               onPressed: answerQuestion1,
-              child: Text("Answer 1"),
+              child: Text("Red"),
             ),
             ElevatedButton(
               onPressed: () {
-                print("Answer 2 Chosen");
+                print("Blue Chosen");
               },
-              child: Text("Answer 2"),
+              child: Text("Blue"),
             ),
             ElevatedButton(
-              onPressed: () => print("Answer 3 Chosen"),
-              child: Text("Answer 3"),
+              onPressed: () => print("Green Chosen"),
+              child: Text("Green"),
             ),
           ],
         ),
