@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  void answerQuestion() {
-    print('Answer Pressed');
+  var qIndex = 0;
+
+  void answerQuestion1() {
+    qIndex += 1;
+    print('Answer 1 Chosen');
+    print(qIndex);
   }
 
   @override
@@ -16,29 +20,25 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("My Quiz App"),
+          title: Text("Quiz App"),
         ),
         body: Column(
           children: [
-            Text('Here is Question!!'),
+            Text(questions[0]),
             ElevatedButton(
-              onPressed: () {
-                answerQuestion();
-              },
-              child: Text('Answer 1'),
+              onPressed: answerQuestion1,
+              child: Text("Answer 1"),
             ),
             ElevatedButton(
               onPressed: () {
-                answerQuestion();
+                print("Answer 2 Chosen");
               },
-              child: Text('Answer 2'),
+              child: Text("Answer 2"),
             ),
             ElevatedButton(
-              onPressed: () {
-                answerQuestion();
-              },
-              child: Text('Answer 3'),
-            )
+              onPressed: () => print("Answer 3 Chosen"),
+              child: Text("Answer 3"),
+            ),
           ],
         ),
       ),
