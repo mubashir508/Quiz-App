@@ -5,6 +5,7 @@ void main() => runApp(MyApp());
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
+    // TODO: implement createState
     return MyAppState();
   }
 }
@@ -14,7 +15,7 @@ class MyAppState extends State<MyApp> {
 
   void answerQuestion1() {
     setState(() {
-      qIndex = qIndex + 1;
+      qIndex += 1;
     });
 
     print('Red Chosen');
