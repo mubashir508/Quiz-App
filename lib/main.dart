@@ -14,7 +14,7 @@ class MyAppState extends State<MyApp> {
 
   void answerQuestion1() {
     setState(() {
-      qIndex += 1;
+      qIndex = qIndex + 1;
     });
 
     print('Red Chosen');
