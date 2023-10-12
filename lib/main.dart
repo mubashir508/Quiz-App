@@ -20,6 +20,9 @@ class MyAppState extends State<MyApp> {
 
     print('Red Chosen');
     print(qIndex);
+    if (qIndex > 1) {
+      qIndex = 0;
+    }
   }
 
   @override
