@@ -2,11 +2,21 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return MyAppState();
+  }
+}
+
+class MyAppState extends State<MyApp> {
   var qIndex = 0;
 
   void answerQuestion1() {
-    qIndex += 1;
+    setState(() {
+      qIndex += 1;
+    });
+
     print('Red Chosen');
     print(qIndex);
   }
@@ -21,7 +31,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Quiz App"),
+          title: Text("Kil Kil App"),
         ),
         body: Column(
           children: [
